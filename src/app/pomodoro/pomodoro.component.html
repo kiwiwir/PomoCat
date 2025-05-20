@@ -1,0 +1,13 @@
+<div class="pomodoro-container">
+  <img [src]="catGif" alt="Cat gif" class="cat-gif" />
+  <div class="timer">
+    <span>{{ timeLeft }} s</span>
+  </div>
+  <div class="state-label">Stan: {{ stateLabel }}</div>
+  <div class="controls">
+    <button (click)="toggleTimer()" [class.pause]="running">
+      {{ running ? "PAUSE" : "START" }}
+    </button>
+    <button (click)="reset()">RESET</button>
+  </div>
+</div>
